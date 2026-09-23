@@ -16,12 +16,17 @@ permanently delete messages. Reports contain temporary approval buttons; the
 owner can confirm a one-month exception by sending the prepared message to their
 own account. Exceptions require renewal and do not automatically re-subscribe
 the owner to a mailing list.
+The owner can also classify an exact sender as "not a mailing list". This
+classification prevents automated unsubscribe and archival actions until the
+owner explicitly reverses it. Unlike temporary mailing-list exceptions, this
+classification does not expire monthly and remains manageable in the reports.
 
 ## Storage
 
 OAuth credentials are stored privately on the owner's devices and server.
 Processing records contain message identifiers, sender addresses, signed list
-identifiers, list hashes, status, timestamps, expiring exceptions, hashed approval
+identifiers, list hashes, status, timestamps, expiring exceptions, owner-defined
+non-list sender classifications, hashed approval
 tokens, report delivery status, and non-content error codes. Email bodies, subjects, and unsubscribe URLs are
 not intentionally retained in the processing database or application logs.
 
