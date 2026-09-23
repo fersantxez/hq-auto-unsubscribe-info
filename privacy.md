@@ -10,14 +10,19 @@ server. It accesses only the Gmail account explicitly configured by its owner.
 The application reads message content and headers to identify and authenticate
 mailing-list unsubscribe instructions. It uses Gmail modification access to
 apply status labels and remove processed messages from the inbox. Although that
-Google permission also permits sending email, the application does not send
-email or permanently delete messages.
+Google permission also permits sending email, the application only sends daily
+reports to the owner's own account. It does not email mailing-list providers or
+permanently delete messages. Reports contain temporary approval buttons; the
+owner can confirm a one-month exception by sending the prepared message to their
+own account. Exceptions require renewal and do not automatically re-subscribe
+the owner to a mailing list.
 
 ## Storage
 
 OAuth credentials are stored privately on the owner's devices and server.
-Processing records contain message identifiers, list hashes, status, timestamps,
-and non-content error codes. Email bodies, subjects, and unsubscribe URLs are
+Processing records contain message identifiers, sender addresses, signed list
+identifiers, list hashes, status, timestamps, expiring exceptions, hashed approval
+tokens, report delivery status, and non-content error codes. Email bodies, subjects, and unsubscribe URLs are
 not intentionally retained in the processing database or application logs.
 
 ## Sharing
