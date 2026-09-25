@@ -16,6 +16,11 @@ permanently delete messages. Reports contain temporary approval buttons; the
 owner can confirm a one-month exception by sending the prepared message to their
 own account. Exceptions require renewal and do not automatically re-subscribe
 the owner to a mailing list.
+Only clearly promotional lists with authenticated unsubscribe headers are
+processed unattended. Personal senders and sensitive services are excluded.
+Ambiguous messages remain in the inbox. A report may show their subject and
+offer a one-message unsubscribe confirmation; the owner must send the prepared
+message to their own account before that message is processed.
 The owner can also classify an exact sender as "not a mailing list". This
 classification prevents automated unsubscribe and archival actions until the
 owner explicitly reverses it. Unlike temporary mailing-list exceptions, this
