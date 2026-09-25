@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Effective September 22, 2026.
+Effective September 25, 2026.
 
 HQ Auto-Unsubscribe is a personal application operated by its owner on a private
 server. It accesses only the Gmail account explicitly configured by its owner.
@@ -11,7 +11,7 @@ The application reads message content and headers to identify and authenticate
 mailing-list unsubscribe instructions. It uses Gmail modification access to
 apply status labels and remove processed messages from the inbox. Although that
 Google permission also permits sending email, the application only sends daily
-reports to the owner's own account. It does not email mailing-list providers or
+reports and owner-requested report pages to the owner's own account. It does not email mailing-list providers or
 permanently delete messages. Reports contain temporary approval buttons; the
 owner can confirm a one-month exception by sending the prepared message to their
 own account. Exceptions require renewal and do not automatically re-subscribe
@@ -20,6 +20,10 @@ The owner can also classify an exact sender as "not a mailing list". This
 classification prevents automated unsubscribe and archival actions until the
 owner explicitly reverses it. Unlike temporary mailing-list exceptions, this
 classification does not expire monthly and remains manageable in the reports.
+Report buttons open Gmail's compose screen rather than an external application
+server. The owner must send the prepared message to confirm an action or request
+another short report page. Reports omit unchanged entries; the owner can request
+their exceptions again to review or reverse them.
 
 ## Storage
 
@@ -27,7 +31,8 @@ OAuth credentials are stored privately on the owner's devices and server.
 Processing records contain message identifiers, sender addresses, signed list
 identifiers, list hashes, status, timestamps, expiring exceptions, owner-defined
 non-list sender classifications, hashed approval
-tokens, report delivery status, and non-content error codes. Email bodies, subjects, and unsubscribe URLs are
+tokens, report delivery status, displayed-entry fingerprints, report page requests,
+and non-content error codes. Email bodies, subjects, and unsubscribe URLs are
 not intentionally retained in the processing database or application logs.
 
 ## Sharing
